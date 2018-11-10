@@ -8,19 +8,20 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+	<link rel="icon" type="image/png" href="img/favicon_cat.png">
 
 
 </head>
 <body>
 <style>
-header{
+#primerSecColor{
 	background: linear-gradient(45deg, #353cb4 0%, #ab6de2 80%);
 	color: #fff;
 }
 .waves{
 	height: 150px;
 	background-image: url("img/g5581.png?v=1.0");
-	background-size: 100% 100%;
+	background-size: contain;
 }
 #imgLogo{ width: 50%}
 .navbar-light .navbar-brand,.navbar-light .navbar-nav .active>.nav-link,.navbar-light .navbar-nav .nav-link{color:white; }
@@ -54,63 +55,106 @@ section p{color: #453f33}
 	-ms-user-select: none;       /* Internet Explorer/Edge */
 	user-select: none;           /* Non-prefixed version, currently not supported by any browser */
 }
+#segundaSecColor{
+	background: linear-gradient(45deg, #402d8480 0%, #ab6de280 80%);
+	color: #fff;
+}
+#segundaSecColor h2{color:white;}
+.divSegPadre{
+	background-image: url('img/image4757.png');
+	background-size: cover;
+}
+.divSegPadre li{line-height: 2.0em;}
+#secFormulario{
+	background-color: #4c2cac; 
+}
+.pIco{    margin-block-start: 0px;
+    margin-block-end: 0px;}
+#secFormulario  p, #secFormulario label{color:white;}
+#secFormulario .form-control{background-color: #ffffff17; color:#fff;border: 1px solid #8f7dc5;}
+.form-control:focus{box-shadow: 0 0 3px 0.2rem rgba(249, 197, 80, 0.77); border-color: transparent;}
+.btn-outline-light:hover{color: #4c2cac;}
+.btn-outline-light:not(:disabled):not(.disabled):active{    color: #4c2cac;
+    background-color: #ded3ff;}
+.modal-backdrop.show {
+    opacity: 1;
+}
+.modal-backdrop{
+	background-color: #673ab7de;
+}
+.modal .btn{
+	background-color: #7a53c0;
+  border-color: #7a53c0;
+}
+.modal .btn:hover{
+	background-color: #6f40bc;
+  border-color: #6f40bc;
+}
+footer{
+	background: #4d3182;
+    color: #dcd3ff;
+}
+footer a{    color: #a45eff;}
+footer a:hover{    color: #b7a4e2;}
+footer i{font-size: 2rem;}
+
 </style>
 
-	
-	<header class="noSelect">
-		<div class="divInternoTextod-flex justify-content-center p-5">
-			<div class="container-fluid">
-				<nav class="navbar navbar-expand-lg navbar-dark  ">
-					<a class="navbar-brand d-flex align-items-center" href="#">
-							<img src="img/favicon_cat.png" width="60" height="60" class="d-inline-block align-top" alt=""> <h3 class="lead pl-3">Infocat Soluciones</h3>
-						</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav  my-2 ml-auto my-lg-0">
-								<li class="nav-item active">
-									<a class="nav-link" href="#">Inicio</a>
+<header class="noSelect" id="primerSecColor">
+	<div class="divInternoTextod-flex justify-content-center p-5">
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg navbar-dark  ">
+				<a class="navbar-brand d-flex align-items-center" href="#">
+						<img src="img/favicon_cat.png" width="60" height="60" class="d-inline-block align-top" alt=""> <h3 class="lead pl-3">Infocat Soluciones</h3>
+					</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav  my-2 ml-auto my-lg-0">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Inicio</a>
+							</li>
+							<li class="nav-item ">
+								<a class="nav-link" href="#">Servicios</a>
+							</li>
+							<li class="nav-item ">
+								<a class="nav-link" href="#">Portafolio</a>
+							</li>
+							<li class="nav-item ">
+									<a class="nav-link" href="#">Contacto</a>
 								</li>
-								<li class="nav-item ">
-									<a class="nav-link" href="#">Servicios</a>
-								</li>
-								<li class="nav-item ">
-									<a class="nav-link" href="#">Portafolio</a>
-								</li>
-								<li class="nav-item ">
-										<a class="nav-link" href="#">Contacto</a>
-									</li>
-								<li class="nav-item" id="liPremium">
-									<a class="nav-link" href="#">Acceso Premium</a>
-								</li>
-						</ul>
-					</div>
-				</nav>
-			 
-			</div>
-			<div class="container">
-				<div class="d-flex py-5">
-						<div class="row align-items-center">
-								<div class="col-xs-12 col-sm-12 col-md-2 d-flex justify-content-center"><img class="img-fluid " src="img/circle1.svg" alt=""></div>
-								<div class="col"><h1 class="display-3 text-center "> Descubra todo el poder de un Software a medida</h1></div>
-							</div>  
+							<li class="nav-item" id="liPremium">
+								<a class="nav-link" href="#">Acceso Premium</a>
+							</li>
+					</ul>
 				</div>
-				<p class="lead text-center">Conozca y utilice los servicios que le ofrecemos, todos los procesos
-						los realizamos en compañía de nuestros clientes con el fin de garantizar soluciones efectivas.</p>
-			</div>
+			</nav>
+		 
 		</div>
-		<div class="waves"></div>
-	</header>
+		<div class="container">
+			<div class="d-flex py-5">
+					<div class="row align-items-center">
+							<div class="col-xs-12 col-sm-12 col-md-2 d-flex justify-content-center"><img class="img-fluid " src="img/circle1.svg" alt=""></div>
+							<div class="col"><h1 class="display-4 text-center "> Descubre todo el poder de un Software a medida</h1></div>
+						</div>  
+			</div>
+			<p class="lead text-center">Conozca y utilice los servicios que le ofrecemos, todos los procesos
+					los realizamos en compañía de nuestros clientes con el fin de garantizar soluciones efectivas.</p>
+		</div>
+	</div>
+	<div class="waves"></div>
+</header>
+	
 
 	<section id="sectionCuerpo">
-		<div class="container py-5">
+		<div class="container pt-5">
 			<h1 class="text-center py-5">NUESTROS SERVICIOS</h1>
 			<div class="row">
 				<div class="col-sm-4 mb-5">
 					<div class="row justify-content-center pb-4">
-						<div class="icoRedondo d-flex justify-content-center align-items-center"><p>
+						<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
 							<i class="fas fa-terminal"></i>
 						</p></div>
 					</div>
@@ -124,7 +168,7 @@ section p{color: #453f33}
 				</div>
 				<div class="col-sm-4 mb-5">
 					<div class="row justify-content-center pb-4">
-						<div class="icoRedondo d-flex justify-content-center align-items-center"><p>
+						<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
 							<i class="far fa-calendar-alt"></i>
 						</p></div>
 					</div>
@@ -138,7 +182,7 @@ section p{color: #453f33}
 				</div>
 				<div class="col-sm-4 mb-5">
 					<div class="row justify-content-center pb-4">
-						<div class="icoRedondo d-flex justify-content-center align-items-center"><p>
+						<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
 							<i class="fas fa-store"></i>
 						</p></div>
 					</div>
@@ -152,8 +196,8 @@ section p{color: #453f33}
 				</div>
 				<div class="col-sm-4 mb-5">
 						<div class="row justify-content-center pb-4">
-							<div class="icoRedondo d-flex justify-content-center align-items-center"><p>
-								<i class="fas fa-terminal"></i>
+							<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
+								<i class="fas fa-at"></i>
 							</p></div>
 						</div>
 						<h3 class="minTitle text-center">Redes Sociales</h3>
@@ -164,8 +208,8 @@ section p{color: #453f33}
 					</div>
 					<div class="col-sm-4 mb-5">
 						<div class="row justify-content-center pb-4">
-							<div class="icoRedondo d-flex justify-content-center align-items-center"><p>
-								<i class="far fa-calendar-alt"></i>
+							<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
+								<i class="fas fa-pen-nib"></i>
 							</p></div>
 						</div>
 						<h3 class="minTitle text-center">Diseño Apps</h3>
@@ -178,8 +222,8 @@ section p{color: #453f33}
 					</div>
 					<div class="col-sm-4 mb-5">
 						<div class="row justify-content-center pb-4">
-							<div class="icoRedondo d-flex justify-content-center align-items-center"><p>
-								<i class="fas fa-store"></i>
+							<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
+								<i class="fas fa-hdd"></i>
 							</p></div>
 						</div>
 						<h3 class="minTitle text-center">Hosting</h3>
@@ -191,10 +235,165 @@ section p{color: #453f33}
 					</div>
 			</div>
 		</div>
+	
+		</section>
+			
+	<div class="divSegPadre" >
+	<div class=" p-5" id="segundaSecColor">
+		<section class="container py-5 " >
+			<h2 class="display-4 text-center">Amamos lo que hacemos</h2>
+			<div class="row ml-auto">
+				<ul class=" m-auto" style="list-style-type: none;">
+					<li class="lead"><i class="fas fa-angle-double-right"></i> Trabajamos con <strong>Metodologías Ágiles</strong>.</li>
+					<li class="lead"><i class="fas fa-angle-double-right"></i> Diseño <strong>centrado en el usuario</strong>.</li>
+					<li class="lead"><i class="fas fa-angle-double-right"></i> Trabajamos para el <strong>reconocimiento de su marca</strong>.</li>
+					<li class="lead"><i class="fas fa-angle-double-right"></i> <strong>Te acompañamos en cada etapa</strong> de tu negocio.</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	</div>
+
+	<section class="container-fluid">
+		<div class="row py-5">
+			<div class="col-md"></div>
+			<div class="col-md mx-4 ">
+				<p class="display-4">Reportes en tiempo real</p>
+				<p class="lead">Crea informes personalizados con gran facilidad.
+					Mejor toma de decisiones para su negocio</p>
+			</div>
+		</div>
+		<div class="row py-5">
+			<div class="col-md mx-4 ">
+				<p class="display-4">Simplicidad</p>
+				<p class="lead">
+						Es sencillo hacer que las cosas sean
+						complicadas, pero nosotros hacemos todo lo
+						posible brindale módulos cada vez
+						más sencillos.</p>
+			</div>
+			<div class="col-md"></div>
+		</div>
+		<div class="row py-5">
+			<div class="col-md"></div>
+			<div class="col-md mx-4 ">
+				<p class="display-4" >Siempre presente </p>
+				<p class="lead">Brindamos mantenimiento,
+						desarrollo de nuevos módulos,
+						adaptamos tu sitio a móviles.
+						Parches de actualización 100% gratuitos</p>
+			</div>
+		</div>
+		<div class="row py-5">
+			<div class="col-md mx-4 ">
+				<p class="display-4">Soporte 100%</p>
+				<p class="lead">
+						Accedemos desde cualquier lugar
+del mundo, puesto que manejamos la asesoria en modalidad
+100% virtual. Nunca te dejaremos sin soporte.</p>
+			</div>
+			<div class="col-md"></div>
+		</div>
 	</section>
 
+	<section class="p-5 " id="secFormulario">
+		<div class="container">
+			<p class="display-4 text-center">Habla con nosotros</p>
+			<div class="row pb-3">
+				<div class="col-sm">
+					<label for="">¿Cuál es tu nombre?</label>
+					<input type="text" class="form-control" id="txtNombre">
+				</div>
+				<div class="col-sm">
+					<label for="">¿Cuál es tu correo?</label>
+					<input type="text" class="form-control" id="txtCorreo">
+				</div>
+			</div>
+			<div class="row pb-3">
+				<div class="col-sm">
+					<label for="">¿Cuál es tu celular?</label>
+					<input type="text" class="form-control" id="txtCelular">
+				</div>
+				<div class="col-sm">
+					<label for="">¿En qué te laboras?</label>
+					<input type="text" class="form-control"id="txtOficio">
+				</div>
+			</div>
+			<div class="row pb-3">
+				<div class="col-sm">
+					<label for="">¿Explícanos tu idea, proyecto, empresa o mejora para tu negocio.?</label>
+					<textarea type="text" class="form-control" id="txtMensaje"></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<button class="btn btn-outline-light btn-lg" id="btnEnviarCorreo"><i class="far fa-comments"></i> Enviar</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class='container-fluid'>
+		<div class="py-5">
+			<div class="row d-flex align-items-center">
+				<div class="col-xs-6 col-md-3 d-flex justify-content-center"><img src="img/favicon_cat.png" class="img-fluid" alt=""></div>
+				<div class="col-xs-6 col-md-3 text-center" style="line-height: 0.5;"><p><strong>Of. Principal: </strong>Av. Huancavelica 435 Dpto. 501</p>
+				<p><strong>Sucursal:</strong> Jr. Ciro Alegría 141 Dpto 503</p></div>
+				<div class="col-xs-6 col-md-3 text-center ">
+					<p class="d-flex justify-content-around">
+						<a href="https://www.facebook.com/infocat.soluciones/"><i class="fab fa-facebook"></i></a> 
+						<a href="https://twitter.com/info_gato"><i class="fab fa-twitter-square"></i></a>
+						<a href="https://wa.me/51977692108"><i class="fab fa-whatsapp-square"></i></a>
+					</p>
+					<p><a href="mailto:servidor@infocatsoluciones.com">servidor@infocatsoluciones.com</a></p></div>
+				
+			</div>
+			<div class="">
+				<p class="text-center">Diseño y contenido: <a href="https://infocatsoluciones.com">Infocat Soluciones S.A.C.</a></p>
+				<p class="text-center">Huancayo, Perú - Todos los derechos reservados © 2017-2018 </p>
+			</div>
+		</div>
+	</footer>
+
+
+	
+
+<!-- Modal -->
+<div class="modal fade" id="modalCorreoEnviado" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body ">
+					<p class="lead text-center" style="color: #673ab7; font-size: 1.7rem;">Su correo ha sido enviado</p>
+					<div class="d-flex justify-content-center">
+						<img src="img/path4585.png" alt="" class="img-fluid">
+					</div>
+					<div class="container">
+							<button type="button" class="btn btn-primary btn-block mt-3"><i class="far fa-envelope"></i> Espero recibir noticias pronto!</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+$('#btnEnviarCorreo').click(function() {
+	$.ajax({url: 'php/enviarCorreo.php', type: 'POST', data: { 
+		nombre: $('#txtNombre').val(),
+		correo: $('#txtCorreo').val(),
+		celular: $('#txtCelular').val(),
+		oficio: $('#txtOficio').val(),
+		mensaje: $('#txtMensaje').val()
+	}}).done(function(resp) {
+		console.log(resp);
+		if(resp=='Mensaje enviado, en breve le respondremos. Saludos'){
+			$('#secFormulario form-control').val('');
+			$('#modalCorreoEnviado').modal('show');
+		}
+	});
+});
+</script>
 </body>
 </html>
