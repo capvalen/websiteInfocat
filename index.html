@@ -10,6 +10,15 @@
 
 	<link rel="icon" type="image/png" href="img/favicon_cat.png">
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-89401950-4"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-89401950-4');
+	</script>
 
 </head>
 <body>
@@ -19,9 +28,25 @@
 	color: #fff;
 }
 .waves{
-	height: 150px;
+	height: 190px;
 	background-image: url("img/g5581.png?v=1.0");
-	background-size: contain;
+	/* background-size: contain; */
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+ /* height: 60px; */
+	
+}
+@media screen and (max-width: 930px){
+	.waves{ height: 110px; }
+}
+@media screen and (min-width: 750px){
+#displayPrimero .lead{font-size: 2.25rem;}
+}
+@media screen and (max-width: 590px){
+	.waves{ height: 70px; }
+	#imgCircleSvg{max-width: 40%!important;}
+	
 }
 #imgLogo{ width: 50%}
 .navbar-light .navbar-brand,.navbar-light .navbar-nav .active>.nav-link,.navbar-light .navbar-nav .nav-link{color:white; }
@@ -59,6 +84,9 @@ section p{color: #453f33}
 	background: linear-gradient(45deg, #402d8480 0%, #ab6de280 80%);
 	color: #fff;
 }
+#sectionCuerpo{
+	background: #f9f9f9;
+}
 #segundaSecColor h2{color:white;}
 .divSegPadre{
 	background-image: url('img/image4757.png');
@@ -67,6 +95,9 @@ section p{color: #453f33}
 .divSegPadre li{line-height: 2.0em;}
 #secFormulario{
 	background-color: #4c2cac; 
+	background-image: url(img/text4483.png);
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .pIco{    margin-block-start: 0px;
     margin-block-end: 0px;}
@@ -97,12 +128,51 @@ footer{
 footer a{    color: #a45eff;}
 footer a:hover{    color: #b7a4e2;}
 footer i{font-size: 2rem;}
+.rowMinPanel{transition: all 0.4s ease-in-out; }
+.rowMinPanel:hover{
+	border: 1px solid #eee;
+	background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 2px 7px #dadada;
+	transition: all 0.4s ease-in-out;    position: relative;
+}
+.tercerPadre .display-4{color: #7155cb;}
+.tercerPadre .display-4:after {
+  content : "";
+  position: absolute;
+  left    : 3rem;
+  /* bottom  : 0; */
+  height  : 4.6rem;
+  width   : 30%; 
+  border-bottom: 4px solid #7155cb;
+}
+.dropdown-menu{
+	background-color: #ffffff57;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.dropdown-item{
+	color: #ffffff;
+}
+.dropdown-item:hover{
+	color: #ffffff;  background-color: #f4d5ff3b;
+}
+
+@keyframes rotate {from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}}
+#imgCircleSvg{
+    -webkit-animation: 8s rotate linear infinite;
+    animation: 8s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
 
 </style>
 
 <header class="noSelect" id="primerSecColor">
 	<div class="divInternoTextod-flex justify-content-center p-5">
-		<div class="container-fluid">
+		<div class="container-fluid p-0">
 			<nav class="navbar navbar-expand-lg navbar-dark  ">
 				<a class="navbar-brand d-flex align-items-center" href="#">
 						<img src="img/favicon_cat.png" width="60" height="60" class="d-inline-block align-top" alt=""> <h3 class="lead pl-3">Infocat Soluciones</h3>
@@ -116,8 +186,13 @@ footer i{font-size: 2rem;}
 							<li class="nav-item active">
 								<a class="nav-link" href="#">Inicio</a>
 							</li>
-							<li class="nav-item ">
-								<a class="nav-link" href="#">Servicios</a>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDpdServicios" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">¿Qué hacemos?</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDpdServicios">
+									<a class="dropdown-item" href="#">Desarrollo de aplicaciones</a>
+									<a class="dropdown-item" href="#">Soluciones de software</a>
+									<a class="dropdown-item" href="#">Casos de éxito</a>
+								</div>
 							</li>
 							<li class="nav-item ">
 								<a class="nav-link" href="#">Portafolio</a>
@@ -133,15 +208,30 @@ footer i{font-size: 2rem;}
 			</nav>
 		 
 		</div>
-		<div class="container">
+		<div class="container d-none" id="displayPrimero">
 			<div class="d-flex py-5">
-					<div class="row align-items-center">
-							<div class="col-xs-12 col-sm-12 col-md-2 d-flex justify-content-center"><img class="img-fluid " src="img/circle1.svg" alt=""></div>
-							<div class="col"><h1 class="display-4 text-center "> Descubre todo el poder de un Software a medida</h1></div>
-						</div>  
+					<div class="row align-items-center " >
+						<div class="col-xs-12 col-sm-12 col-md-2 d-flex justify-content-center"><img class="img-fluid" id="imgCircleSvg" src="img/circle1.svg" alt=""></div>
+						<div class="col"><h1 class="display-4 text-center "> Descubre todo el poder de un Software a medida</h1></div>
+					</div>
 			</div>
 			<p class="lead text-center">Conozca y utilice los servicios que le ofrecemos, todos los procesos
 					los realizamos en compañía de nuestros clientes con el fin de garantizar soluciones efectivas.</p>
+		</div>
+		<div class="container" id="displayPrimero">
+			<div class="d-flex py-5">
+					<div class="row align-items-center " >
+						<div class="col-xs-12 col-sm-12 col-md-2 d-flex justify-content-center"><img class="img-fluid" id="imgCircleSvg" src="img/circle2.svg?ver=0.2" alt=""></div>
+						<div class="col"><h1 class="display-4 text-center "> Aumente la eficiencia de su negocio</h1></div>
+					</div>
+			</div>
+			
+				<p class="lead text-center subtitulo"><span id="spanH3"></span></p>
+				<div id="frasesType" style="display: none;">
+						<p><strong>¡Concéntrese en sus clientes!</strong>, mientras nosotros nos encargamos del software.^1200</p>
+						<p>Apps rápidas, eficientes, de fácil manejo, <strong>amigables e innovadoras.</strong>^1200</p>
+						<p>Creamos sistemas <strong>a medida</strong>, y a su necesidad...^1200</p>
+				</div>
 		</div>
 	</div>
 	<div class="waves"></div>
@@ -152,7 +242,7 @@ footer i{font-size: 2rem;}
 		<div class="container pt-5">
 			<h1 class="text-center py-5">NUESTROS SERVICIOS</h1>
 			<div class="row">
-				<div class="col-sm-4 mb-5">
+				<div class="col-sm-4 mb-5 pt-3 rowMinPanel" id="">
 					<div class="row justify-content-center pb-4">
 						<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
 							<i class="fas fa-terminal"></i>
@@ -166,7 +256,7 @@ footer i{font-size: 2rem;}
 							Cuentas por Cobrar,
 							entre otros</p>
 				</div>
-				<div class="col-sm-4 mb-5">
+				<div class="col-sm-4 mb-5 pt-3 rowMinPanel" id="">
 					<div class="row justify-content-center pb-4">
 						<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
 							<i class="far fa-calendar-alt"></i>
@@ -180,7 +270,7 @@ footer i{font-size: 2rem;}
 							Nuestras aplicaciones son
 							escalables y flexibles</p>
 				</div>
-				<div class="col-sm-4 mb-5">
+				<div class="col-sm-4 mb-5 pt-3 rowMinPanel" id="">
 					<div class="row justify-content-center pb-4">
 						<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
 							<i class="fas fa-store"></i>
@@ -192,9 +282,9 @@ footer i{font-size: 2rem;}
 						 rompiendo las barreras
 							geográficas; recibiendo pagos
 						 online mediante una pasarela de pagos
-						 100% seguro con Certificado SSL</p>
+						 100% seguro con Certificados SSL</p>
 				</div>
-				<div class="col-sm-4 mb-5">
+				<div class="col-sm-4 mb-5 pt-3 rowMinPanel" id="">
 						<div class="row justify-content-center pb-4">
 							<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
 								<i class="fas fa-at"></i>
@@ -206,7 +296,7 @@ footer i{font-size: 2rem;}
 								para obtener el mejor posicionamiento
 								y reconocimiento de su marca.</p>
 					</div>
-					<div class="col-sm-4 mb-5">
+					<div class="col-sm-4 mb-5 pt-3 rowMinPanel" id="">
 						<div class="row justify-content-center pb-4">
 							<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
 								<i class="fas fa-pen-nib"></i>
@@ -220,7 +310,7 @@ footer i{font-size: 2rem;}
 								(adaptable a smartphones,
 								tablet, laptop, pc de escritorio)</p>
 					</div>
-					<div class="col-sm-4 mb-5">
+					<div class="col-sm-4 mb-5 pt-3 rowMinPanel" id="">
 						<div class="row justify-content-center pb-4">
 							<div class="icoRedondo d-flex justify-content-center align-items-center"><p class="pIco">
 								<i class="fas fa-hdd"></i>
@@ -229,7 +319,7 @@ footer i{font-size: 2rem;}
 						<h3 class="minTitle text-center">Hosting</h3>
 						<p class="text-center">Ofrecemos planes de alojamiento: 
 								Dominio, correo electronico,
-								base de Datos, Certificado SSL
+								Base de Datos, Certificado SSL
 								Servidor Linux, 1 año gratis con
 								atención al cliente 24/7</p>
 					</div>
@@ -237,10 +327,22 @@ footer i{font-size: 2rem;}
 		</div>
 	
 		</section>
-			
+	
+	<section class="container-fluid padreIntermedio">
+		<div class="row d-flex align-items-center pl-md-5 pl-sm-0 mt-5">
+			<div class="col-md-4">
+					<p class="display-4 text-center">Una plataforma, mil y un dispositivos</p>
+					<p class="lead text-center">Hoy en día es indispensable pensar en cómo vamos a llegar a los usuarios de dispositivos móviles. Una de las tendencias en el desarrollo de páginas es el diseño Responsive o arte líquido, que se autoajusta a las pantallas de todos los dispositivos desde donde se accede, ya sea en posición vertical u horizontal.</p>
+			</div>
+			<div class="col">
+					<img src="img/responsivo.png" alt="" class="img-fluid">
+			</div>
+		</div>
+	</section>
+
 	<div class="divSegPadre" >
 	<div class=" p-5" id="segundaSecColor">
-		<section class="container py-5 " >
+		<section class="container py-5 my-5 " >
 			<h2 class="display-4 text-center">Amamos lo que hacemos</h2>
 			<div class="row ml-auto">
 				<ul class=" m-auto" style="list-style-type: none;">
@@ -254,45 +356,56 @@ footer i{font-size: 2rem;}
 	</div>
 	</div>
 
-	<section class="container-fluid">
-		<div class="row py-5">
-			<div class="col-md"></div>
-			<div class="col-md mx-4 ">
-				<p class="display-4">Reportes en tiempo real</p>
-				<p class="lead">Crea informes personalizados con gran facilidad.
-					Mejor toma de decisiones para su negocio</p>
+	<section class="container-fluid tercerPadre">
+		<div class="row align-items-center ">
+			<div class="col-md px-0">
+				<img src="img/Traditional-vs-Agile-Methodology-1080x675.jpg" alt="" class="img-fluid">
+			</div>
+			<div class="col-md px-0 ">
+				<div class="px-5">
+					<p class="display-4">Startup</p>
+					<p class="lead"> ¡Te ayudamos a romper las reglas!
+						Trabajamos ofreciendo soluciones adaptadas a sus necesidades. Nuestros servicios básicos para conseguir tu producto digital increíble son: Estrategia de Negocio, Diseño UX/UI, Desarrollo Web y App y Analítica Digital.</p>
+				</div>
 			</div>
 		</div>
-		<div class="row py-5">
-			<div class="col-md mx-4 ">
-				<p class="display-4">Simplicidad</p>
-				<p class="lead">
-						Es sencillo hacer que las cosas sean
-						complicadas, pero nosotros hacemos todo lo
-						posible brindale módulos cada vez
-						más sencillos.</p>
+		<div class="row align-items-center ">
+			<div class="col-md px-0 ">
+				<div class="px-5">
+					<p class="display-4">Simplicidad</p>
+					<p class="lead">
+							Es sencillo hacer que las cosas sean
+							complicadas, pero nosotros hacemos todo lo
+							posible brindale módulos cada vez
+							más sencillos. Bajo la apariencia de un módulo sencillo, ofrecemos una potente herramienta que ayuda a automatizar los procesos de su empresa</p>
+				</div>
 			</div>
-			<div class="col-md"></div>
-		</div>
-		<div class="row py-5">
-			<div class="col-md"></div>
-			<div class="col-md mx-4 ">
-				<p class="display-4" >Siempre presente </p>
-				<p class="lead">Brindamos mantenimiento,
-						desarrollo de nuevos módulos,
-						adaptamos tu sitio a móviles.
-						Parches de actualización 100% gratuitos</p>
+			<div class="col-md px-0">
+				<img src="img/Focus-on-your-customers-while-we-take-care-of-your-software.jpg" alt="" class="img-fluid">
 			</div>
 		</div>
-		<div class="row py-5">
-			<div class="col-md mx-4 ">
-				<p class="display-4">Soporte 100%</p>
-				<p class="lead">
-						Accedemos desde cualquier lugar
-del mundo, puesto que manejamos la asesoria en modalidad
-100% virtual. Nunca te dejaremos sin soporte.</p>
+		<div class="row align-items-center ">
+			<div class="col-md px-0">
+				<img src="img/iso-broker-img.jpg" alt="" class="img-fluid">
 			</div>
-			<div class="col-md"></div>
+			<div class="col-md px-0 ">
+				<div class="px-5">
+					<p class="display-4" >Tiendas online</p>
+					<p class="lead">Transformamos los procesos cotidianos de su empresa en funcionalidades integrándolos en una tienda online, que ayude a optimizar el proceso de ventas generando nuevas ganancias.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row align-items-center ">
+			<div class="col-md px-0 ">
+				<div class="px-5">
+					<p class="display-4">Consultoría Tecnológica</p>
+					<p class="lead">
+							Somos curiosos y nos gustan los retos. Disfrutamos de aprender todo el tiempo y nos emociona tratar de ir más lejos, descubrir qué hay más allá de lo que conocemos, encontrar soluciones innovadoras.</p>
+				</div>
+				</div>
+			<div class="col-md px-0">
+				<img src="img/1833342060096805_3431033889970192384_o.jpg" alt="" class="img-fluid">
+			</div>
 		</div>
 	</section>
 
@@ -338,7 +451,7 @@ del mundo, puesto que manejamos la asesoria en modalidad
 			<div class="row d-flex align-items-center">
 				<div class="col-xs-6 col-md-3 d-flex justify-content-center"><img src="img/favicon_cat.png" class="img-fluid" alt=""></div>
 				<div class="col-xs-6 col-md-3 text-center" style="line-height: 0.5;"><p><strong>Of. Principal: </strong>Av. Huancavelica 435 Dpto. 501</p>
-				<p><strong>Sucursal:</strong> Jr. Ciro Alegría 141 Dpto 503</p></div>
+				<p><strong>Sucursal:</strong> Jr. Ciro Alegría 141 Dpto. 503</p></div>
 				<div class="col-xs-6 col-md-3 text-center ">
 					<p class="d-flex justify-content-around">
 						<a href="https://www.facebook.com/infocat.soluciones/"><i class="fab fa-facebook"></i></a> 
@@ -378,7 +491,18 @@ del mundo, puesto que manejamos la asesoria en modalidad
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/typed.min.js"></script> <!-- Extraído de: https://github.com/mattboldt/typed.js/ -->
 <script>
+$(document).ready(function () {
+	var typed = new Typed('#spanH3', {
+		stringsElement: '#frasesType',
+		typeSpeed: 30,
+		backSpeed: 40,
+		startDelay: 1000,
+		loop: true,
+		loopCount: Infinity
+	});
+});
 $('#btnEnviarCorreo').click(function() {
 	$.ajax({url: 'php/enviarCorreo.php', type: 'POST', data: { 
 		nombre: $('#txtNombre').val(),
