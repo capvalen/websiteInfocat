@@ -30,8 +30,8 @@ try {
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Mensaje desde la web infocat';
-    $mail->Body    = 'Se recibió el siguiente correo:'.'<br><br>'.
+    $mail->Subject = 'Mensaje recibido desde Infocat';
+    $mail->Body    = 'Hemos recibido éste mensaje:'.'<br><br>'.
     '<strong>Nombre: </strong>'.$_POST['nombre'].'<br>'.
     '<strong>Responder a: </strong>'.$_POST['correo'].'<br>'.
     '<strong>Celular: </strong>'.$_POST['celular'].'<br>'.
@@ -40,6 +40,7 @@ try {
     '------------------------------------------------------'.'<br>'.
     'Enviado desde el formulario de <a href="https://infocatsoluciones.com">Infocat Soluciones</a>'.'<br>'.
     '<em>No responda a éste mensaje autogenerado.<em>';
+    '<img src="https://infocatsoluciones.com/img/firmaCorreoWeb.png" alt="Firma de correo automático">'.'<br>'.
 
     $mail->send();
     echo 'Mensaje enviado, en breve le respondremos. Saludos';

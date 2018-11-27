@@ -122,7 +122,7 @@ section p{color: #453f33}
   border-color: #6f40bc;
 }
 footer{
-	background: #4d3182;
+	background: #1c1817; /* #4d3182; */
     color: #dcd3ff;
 }
 footer a{    color: #a45eff;}
@@ -167,11 +167,18 @@ footer i{font-size: 2rem;}
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
 }
-
+#contImg{
+	background-color: #f0f8ff96;
+    border-radius: 5px;
+    padding: 10px;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
 </style>
 
 <header class="noSelect" id="primerSecColor">
-	<div class="divInternoTextod-flex justify-content-center p-5">
+	<div class="divInternoTexto justify-content-center p-md-5">
 		<div class="container-fluid p-0">
 			<nav class="navbar navbar-expand-lg navbar-dark  ">
 				<a class="navbar-brand d-flex align-items-center" href="#">
@@ -240,7 +247,7 @@ footer i{font-size: 2rem;}
 
 	<section id="sectionCuerpo">
 		<div class="container pt-5">
-			<h1 class="text-center py-5">NUESTROS SERVICIOS</h1>
+			<h2 class="text-center display-4 py-5">NUESTROS SERVICIOS</h2>
 			<div class="row">
 				<div class="col-sm-4 mb-5 pt-3 rowMinPanel" id="">
 					<div class="row justify-content-center pb-4">
@@ -335,7 +342,7 @@ footer i{font-size: 2rem;}
 					<p class="lead text-center">Hoy en día es indispensable pensar en cómo vamos a llegar a los usuarios de dispositivos móviles. Una de las tendencias en el desarrollo de páginas es el diseño Responsive o arte líquido, que se autoajusta a las pantallas de todos los dispositivos desde donde se accede, ya sea en posición vertical u horizontal.</p>
 			</div>
 			<div class="col">
-					<img src="img/responsivo.png" alt="" class="img-fluid">
+					<img src="img/responsivo.png?ver=1.0.1" alt="" class="img-fluid">
 			</div>
 		</div>
 	</section>
@@ -449,17 +456,22 @@ footer i{font-size: 2rem;}
 	<footer class='container-fluid'>
 		<div class="py-5">
 			<div class="row d-flex align-items-center">
-				<div class="col-xs-6 col-md-3 d-flex justify-content-center"><img src="img/favicon_cat.png" class="img-fluid" alt=""></div>
+				<div class="col-xs-6 col-md-3 d-flex justify-content-center" ><img src="img/favicon_cat.png" class="img-fluid" id="contImg" alt=""></div>
 				<div class="col-xs-6 col-md-3 text-center" style="line-height: 0.5;"><p><strong>Of. Principal: </strong>Av. Huancavelica 435 Dpto. 501</p>
 				<p><strong>Sucursal:</strong> Jr. Ciro Alegría 141 Dpto. 503</p></div>
 				<div class="col-xs-6 col-md-3 text-center ">
+					<p><strong>Síguenos en:</strong></p>
 					<p class="d-flex justify-content-around">
 						<a href="https://www.facebook.com/infocat.soluciones/"><i class="fab fa-facebook"></i></a> 
 						<a href="https://twitter.com/info_gato"><i class="fab fa-twitter-square"></i></a>
 						<a href="https://wa.me/51977692108"><i class="fab fa-whatsapp-square"></i></a>
 					</p>
-					<p><a href="mailto:servidor@infocatsoluciones.com">servidor@infocatsoluciones.com</a></p></div>
+					
 				
+			</div>
+			<div class="col-xs-6 col-md-3 text-center">
+				<p><strong>Contacto: </strong></p>
+				<p><a href="mailto:servidor@infocatsoluciones.com">servidor@infocatsoluciones.com</a></p></div>
 			</div>
 			<div class="">
 				<p class="text-center">Diseño y contenido: <a href="https://infocatsoluciones.com">Infocat Soluciones S.A.C.</a></p>
@@ -481,7 +493,7 @@ footer i{font-size: 2rem;}
 						<img src="img/path4585.png" alt="" class="img-fluid">
 					</div>
 					<div class="container">
-							<button type="button" class="btn btn-primary btn-block mt-3"><i class="far fa-envelope"></i> Espero recibir noticias pronto!</button>
+							<button type="button" class="btn btn-primary btn-block mt-3" data-dismiss="modal" ><i class="far fa-envelope"></i> Espero recibir noticias pronto!</button>
 					</div>
 
 				</div>
